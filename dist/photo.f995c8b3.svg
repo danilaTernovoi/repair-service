@@ -1,0 +1,7 @@
+<svg id="Shadows" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+  <title>5Artboard 1</title>
+  <circle cx="82" cy="127" r="6" style="fill: #7f7f7f"/>
+  <ellipse cx="184" cy="185" rx="57" ry="56" style="fill: none;stroke: #7f7f7f;stroke-miterlimit: 10;stroke-width: 8px"/>
+  <ellipse cx="184" cy="185" rx="28" ry="27" style="fill: none;stroke: #7f7f7f;stroke-miterlimit: 10;stroke-width: 8px"/>
+  <path d="M289,98H232L210,75H155L132,98H74a21,21,0,0,0-21,21h0V251a21,21,0,0,0,21,21H289a21,21,0,0,0,21-21V119a21,21,0,0,0-21-21Z" style="fill: none;stroke: #7f7f7f;stroke-miterlimit: 10;stroke-width: 8px"/>
+</svg>
