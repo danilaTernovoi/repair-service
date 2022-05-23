@@ -1,0 +1,69 @@
+@use '~normalize.css/normalize.css';
+@use './fonts';
+@use './mixins' as *;
+@use './typo.scss';
+@use './reset.scss';
+@use './layout.scss';
+
+// sections
+@use './sections/header.scss';
+@use './sections/offer.scss';
+@use './sections/services.scss';
+@use './sections/sale.scss';
+@use './sections/how-we-works.scss';
+@use './sections/reviews.scss';
+@use './sections/why-choose-us.scss';
+@use './sections/about-us.scss';
+@use './sections/questions.scss';
+@use './sections/footer.scss';
+@use './sections/main.scss';
+
+.bg {
+  background-color: rgba(navy, 0.1);
+}
+
+.container {
+  width: 90%;
+  max-width: 1350px;
+  min-width: 250px;
+  margin: 0 auto;
+}
+
+.to-top-btn {
+  border: none;
+  outline: none;
+
+  box-shadow: 0 0 10px rgba(black, 0.08);
+
+  font-size: 1.6rem;
+  position: fixed;
+
+  $offset: 50px;
+
+  width: $offset;
+  height: $offset;
+
+  bottom: $offset;
+  right: $offset;
+
+  background-color: white;
+  border-radius: 50%;
+
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  transition: opacity 0.15s;
+}
+
+.section-hidden {
+  opacity: 0;
+}
+
+.section-visible {
+  opacity: 1;
+}

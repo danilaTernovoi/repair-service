@@ -1,0 +1,97 @@
+@use '../mixins' as *;
+@use '../vars' as *;
+
+$gap: 50px;
+
+.how-we-works {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+
+  padding: 20px 0;
+}
+
+.how-we-works__steps {
+  max-width: 1000px;
+
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  grid-auto-rows: 100px;
+  gap: $gap;
+
+  // @include table {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step__space {
+  @include mobile {
+    display: none;
+  }
+}
+
+.step__title {
+  font-size: 2rem;
+  font-family: $font-title;
+}
+
+.step__desc {
+  font-family: $font-light;
+  color: $color-ghost;
+  font-size: 1.5rem;
+  max-width: 324px;
+}
+
+.step:nth-of-type(odd) {
+  text-align: right;
+
+  @include mobile {
+    text-align: left;
+  }
+}
+
+.order {
+  width: 50px;
+  height: 50px;
+
+  border: 2px solid $color-ghost;
+  border-radius: 50%;
+  justify-self: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  color: $color-ghost;
+  font-size: 1.6rem;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.order-before {
+  content: '';
+  width: 2px;
+  height: $gap;
+
+  position: absolute;
+  left: 50%;
+  background-color: $color-ghost;
+}

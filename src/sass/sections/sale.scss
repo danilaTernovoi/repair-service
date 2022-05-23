@@ -1,0 +1,32 @@
+@use '../mixins' as *;
+
+.sale {
+  $gradient-color: rgba(black, 0.75);
+  background-image: linear-gradient($gradient-color, $gradient-color),
+    url(../assets/img/sale-bg.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sale__inner {
+  @include col-center(40px);
+}
+
+.sale__title,
+.sale__text {
+  color: white;
+  text-align: center;
+}
+
+.sale__text-content {
+  @include col-center(2rem);
+}
+
+.sale__get-sale-btn {
+  @include button(white);
+}

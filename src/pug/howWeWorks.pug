@@ -1,0 +1,32 @@
+mixin step(item, left = true, order)
+  if left
+    div.step
+      h2.step__title= item.title
+      p.step__desc= item.desc
+    div.order= order
+    div.step__space
+
+  else
+    div.step__space
+    div.order= order
+    div.step
+      h2.step__title= item.title
+      p.step__desc= item.desc
+
+section.how-we-works.container
+  h2.text-title.how-we-works__title Как мы работаем?
+  .how-we-works__steps
+    +step({
+      title: 'Сообщаете о проблеме',
+      desc: 'Звоните в наш центр, описываете вашу проблему, в тот же день наш мастер приезжает к вам.'
+    }, true, 1)
+
+    +step({
+      title: 'Бесплатная диагностика',
+      desc: 'Наш мастер произведет диагностику, сообщит о проблеме и предложит решение.'
+    }, false, 2)
+
+    +step({
+      title: 'Ремонт',
+      desc: 'Мы договоримся о цене и сроках, мастер начнет работу.'
+    }, true, 3)

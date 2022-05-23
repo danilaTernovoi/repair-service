@@ -1,0 +1,31 @@
+-
+  const links = {
+    services: "Услуги",
+    footer: "Контакты"
+  };
+
+  const phones = [
+    "+7 (950) 478 83 18",
+    "+7 (342) 288 17 21"
+  ];
+
+header.header
+  .header__inner.container
+    nav.navbar
+      ul.navbar__list
+        each value, key in links
+          li.navbar__list-item.text-light
+            a(href=`#${key}`)= value  
+    img.logo.text-subtitle(
+      src='/assets/img/tv-service.png'
+      width='100'
+      height='100'
+    )
+    .header__separator
+    .phone.text-light 
+      span.phone__label Звоните:
+      span.phone__label-mobile
+        i.fa-solid.fa-phone
+      .phone-group
+        each phone in phones
+          div= phone

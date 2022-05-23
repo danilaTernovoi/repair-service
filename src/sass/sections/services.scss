@@ -1,0 +1,187 @@
+@use '../vars' as *;
+@use '../mixins' as *;
+
+$price-padding: 20px;
+
+@mixin _mobile {
+  @media screen and (max-width: 578px) {
+    @content;
+  }
+}
+
+.services {
+  @include section-fill();
+}
+
+.services__list {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 20px;
+
+  @include _mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card__text {
+  text-align: center;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service-cost-btn {
+  @include button();
+}
+
+.services__footer {
+  text-align: center;
+}
+
+.service-card__title {
+  font-size: 2.4rem;
+  font-family: $font-title;
+}
+
+.service-card__text {
+  font-size: 1.6rem;
+  font-family: $font-light;
+  color: $color-ghost;
+  max-width: 320px;
+  text-align: center;
+}
+
+.services__price {
+  max-height: 90vh;
+  background-color: rgba(black, 0.8);
+  z-index: -5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  overflow-y: visible;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transform: translate(-100%, -100%);
+  transition-property: opacity transform;
+  transition-duration: 0.25s;
+
+  @media screen and (max-width: 640px) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 0);
+    max-height: 100vh;
+  }
+}
+
+.services__price_visible {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 20;
+
+  @media screen and (max-width: 640px) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 0);
+  }
+}
+
+.price-list {
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+
+  padding-top: 50px;
+  padding-right: 50px;
+
+  overflow-y: auto;
+  max-height: inherit;
+}
+
+.price-item {
+  font-family: $font-light;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.close-btn {
+  position: absolute;
+  font-size: 2rem;
+  color: white;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 10px;
+  right: 10px;
+}
+
+.price__treshold-separator {
+  display: none;
+
+  @media screen and (max-width: 362px) {
+    display: block;
+  }
+}
+
+.price-treshold:before {
+  content: ' ';
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 370px;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 700px;
+  margin: 0 auto;
+
+  &__head {
+    grid-column: 1 / -1;
+    background-image: url(/assets/img/services/combo.jpg);
+    background-size: cover;
+  }
+
+  &__left {
+    background-image: url(/assets/img/services/home.jpg);
+    background-size: cover;
+  }
+
+  &__right {
+    background-image: url(/assets/img/services/monitor.jpg);
+    background-size: cover;
+  }
+
+  &__head,
+  &__left,
+  &__right {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media screen and (max-width: 376px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

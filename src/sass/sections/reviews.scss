@@ -1,0 +1,85 @@
+@use '../vars' as *;
+@use '../mixins' as *;
+
+.reviews {
+  @include section-fill;
+  padding-bottom: 50px;
+}
+
+.reviews__list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $tooltip-height * 1.8;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.review-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.review {
+  padding: 3rem;
+
+  background-color: white;
+  border-radius: 1.5rem;
+  position: relative;
+}
+
+.review__author {
+  margin-top: 20px;
+  font-family: $font-light;
+  font-size: 1.6rem;
+}
+
+.review::after {
+  content: '';
+  display: block;
+
+  position: absolute;
+
+  bottom: -$tooltip-height;
+  left: $tooltip-height;
+
+  height: $tooltip-height;
+  width: $tooltip-height;
+  clip-path: polygon(0 0, 0% 100%, 94% 0);
+  background-color: white;
+}
+
+.feedback {
+  width: 80%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 6rem;
+}
+
+.feedback__email {
+  border-bottom: 2px solid blue;
+  font-family: $font-light;
+}
+
+.telegram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 23px;
+}
+
+.email__breaker {
+  display: none;
+  @media screen and (max-width: 375px) {
+    display: block;
+  }
+}
+
+.review__text {
+  line-height: 40px;
+}

@@ -1,0 +1,38 @@
+@use '../vars' as *;
+@use '../mixins' as *;
+
+.why-choose-us {
+  padding: 20px 0;
+}
+
+.text-subtitle {
+  text-align: center;
+}
+
+.cause {
+  display: flex;
+  gap: 20px;
+  min-width: 400px;
+}
+
+.cause__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  max-width: 300px;
+}
+
+.cause__title {
+  font-family: $font-title;
+  font-size: 1.6rem;
+}
+
+.cause-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  padding: 20px 0;
+}

@@ -1,0 +1,107 @@
+-
+  const imageSize = 120;
+  const servicesData = {
+    'Телефоны': {
+      viewName: 'phone',
+      text: `Специалисты сервисного центра осуществляют
+        базовый ремонт сотовых телефонов за 15
+        минут.`
+    },
+    'Планшеты': {
+      viewName: 'table',
+      text: `Ремонтируем неисправные планшеты. Первую
+        диагностику планшета можно произвести сразу
+        же на месте.`
+    },
+    'Ноутбуки': {
+      viewName: 'notebook',
+      text: `Ремонтируем, восстанавливаем, меняем,
+        чистим, настраиваем и устраняем практически
+        все неисправности.`
+    },
+    'Компьютеры': {
+      viewName: 'desktop',
+      text: `Наши специалисты осуществляют качественный
+        ремонт компьютеров любых производителей.`
+    },
+    'Фотоаппараты': {
+      viewName: 'photo',
+      text: `Наш сервисный центр оказывает полный
+        комплекс профессиональных услуг по ремонту
+        зеркальных и цифровых фотоаппаратов.`
+    },
+    'Плееры': {
+      viewName: 'player',
+      text: `Ремонт плееров любых производителей c
+        предварительной диагностикой и последующим
+        восстановление.`
+    }
+  };
+
+section.services#services
+  .services__price
+    .close-btn
+      <i class="fa-solid fa-xmark"></i>
+    .price-list
+      .price-item
+        |Замена подсветки телевизора
+        br.price__treshold-separator
+        span.price-treshold от 1000
+      .price-item
+        |Замена блока питания
+        br.price__treshold-separator
+        span.price-treshold от 800
+      .price-item
+        |Ремонт блока питания
+        br.price__treshold-separator
+        span.price-treshold от 1200
+      .price-item
+        |Замена материнской платы
+        br.price__treshold-separator
+        span.price-treshold от 1000
+      .price-item
+        |Ремонт материнской платы
+        br.price__treshold-separator
+        span.price-treshold от 1500 
+      .price-item
+        |Замена матрицы телевизора
+        br.price__treshold-separator
+        span.price-treshold от 3000
+      .price-item
+        |Замена дисплея телефона
+        br.price__treshold-separator
+        span.price-treshold от 700
+      .price-item
+        |Замена разъема питания
+        br.price__treshold-separator
+        span.price-treshold от 600
+      .price-item
+        |Замена корпусной части
+        br.price__treshold-separator
+        span.price-treshold от 1000
+      .price-item
+        |Замена динамика
+        br.price__treshold-separator
+        span.price-treshold от 500
+
+  .container.services__inner
+    .text-title.services__title Услуги
+    //- .services__list
+    //-   each value, key in servicesData
+    //-     .service-card.services__service-card
+    //-       .service-card__image-place
+    //-         img.service-card__image(
+    //-           width=imageSize
+    //-           height=imageSize
+    //-           alt='oops'
+    //-           src=`/assets/img/${value.viewName}.svg`
+    //-         )
+    //-       h2.service-card__title= key
+    //-       p.service-card__text= value.text
+    .collage
+      .collage__head
+      .collage__left
+      .collage__right
+
+    footer.services__footer
+      button.service-cost-btn.text Стоимость услуг

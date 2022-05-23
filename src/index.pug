@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="./sass/index.scss")
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    title Сервисный центр
+  body
+    include pug/header
+    main.main
+      include pug/offer
+      include pug/services
+      include pug/sale
+      include pug/howWeWorks
+      include pug/reviews
+      include pug/questions
+    include pug/footer
+    button.to-top-btn
+      <i class="fa-solid fa-arrow-up-long"></i>
+      <script src="https://kit.fontawesome.com/b6886cd2ea.js" crossorigin="anonymous"></script>
+      script(src="./js/index.js")

@@ -1,0 +1,33 @@
+@use './vars' as *;
+
+.text {
+  font-family: inherit;
+  font-size: 1.6rem;
+}
+
+.text-ghost {
+  color: lightgrey;
+}
+
+.text-title {
+  font-family: $font-title;
+  font-size: 3rem;
+}
+
+.text-subtitle {
+  font-family: $font-title;
+  font-size: 2.5rem;
+}
+
+.text-light {
+  font-family: $font-light;
+  font-size: 1.6rem;
+}
+
+.text,
+.text-ghost,
+.text-title,
+.text-subtitle,
+.text-light {
+  user-select: none;
+}

@@ -1,0 +1,31 @@
+-
+  const data = [
+    {
+      authorName: 'Катя',
+      body: 'Можно ли оплатить работы банковской картой?',
+      response: 'Да, оплатить работу можно и наличными и по банковской карте.'
+    },
+    {
+      authorName: 'Катя',
+      body: 'Каков гарантийный срок работы?',
+      response: `Гарантия на ремонтые работы дается сроком на 1 месяц, кроме работ по обработке от влаги. По работам связанным с обработкой от влаги дается гарантия 1 день.`
+    },
+    {
+      authorName: 'Катя',
+      body: 'Вы используете оригинальные запчасти для ремонта?',
+      response: `Да. Мы работаем только с новыми оригинальными запасными частями поставляемых от производителя.`
+    } 
+  ]; 
+
+section.questions
+  .container
+    .questions__title Частые вопросы
+    .questions__list
+      each item in data
+        .question
+          .question__row
+            div.author= `${item.authorName}: `
+            div.body.request= `${item.body}`
+          .question__row
+            div.author Поддержка:
+            div.body.response= `${item.response}`
